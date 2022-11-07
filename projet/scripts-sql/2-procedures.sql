@@ -1,5 +1,6 @@
-SET search_path TO projet;
+-- SEARCH PATH
 
+SET search_path TO projet;
 
 -- Supprime tous les triggers du schema
 
@@ -19,7 +20,6 @@ $code$
     END;
 $code$;
 
-
 -- Supprime toutes les fonctions du schema
 
 DO $code$
@@ -36,16 +36,3 @@ BEGIN
 	END LOOP;
 END;
 $code$;
-
-
--- Fonctions
-
-
-
--- Triggers
-
-
-
-
-
-

@@ -34,7 +34,7 @@ public class DaoCompte implements IDaoCompte {
 	public int inserer(Compte compte) {
 		em.persist(compte);
 		em.flush();
-		return compte.getId();
+		return compte.getIdcompte();
 	}
 
 	@Override

@@ -30,6 +30,16 @@ public class Compte implements Serializable  {
 	@Email( message = "Adresse e-mail invalide" )
 	private String		email;
 	
+	@NotBlank( message = "Le nom doit être renseigné")
+	@Size(max=25, message = "Valeur trop longue pour le nom : 25 car. maxi" )
+	private String nom;
+
+	@NotBlank( message = "Le prenom doit être renseigné")
+	@Size(max=25, message = "Valeur trop longue pour le prenom : 25 car. maxi" )
+	private String prenom;
+	
+	private double credit;
+	
 	private List<String> roles = new ArrayList<>();	
 
 	
@@ -90,6 +100,30 @@ public class Compte implements Serializable  {
 	}
 
 	
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public double getCredit() {
+		return credit;
+	}
+
+	public void setCredit(double credit) {
+		this.credit = credit;
+	}
+
 	public boolean isInRole( String role ) {
 		return roles.contains( role );
 	}
